@@ -20,7 +20,7 @@
 .command-search input{min-width:0;flex:1}
 @media(max-width:900px){.command-layout{grid-template-columns:minmax(0,1fr)}.console{min-height:390px}}
 
-/* Elis: compact team and copyright; matching all viewports */
+/* Esil: compact team and copyright; matching all viewports */
 .brand .mark{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border:0;border-radius:0;transform:none;font-size:inherit;flex:0 0 24px;margin-right:-1px}
 .brand .mark svg{display:block;width:23px;height:23px;color:var(--accent);transform:translateY(-5px)}
 .header .nav{gap:22px}
@@ -44,13 +44,13 @@
 @media(max-width:1050px){.header .nav{gap:16px}.team-entry{grid-template-columns:minmax(0,1fr) minmax(0,1.25fr) auto;gap:16px}}
 @media(max-width:750px){.team-section{padding-top:72px;padding-bottom:70px}.team-entry{grid-template-columns:1fr;gap:16px;padding:22px 0}.team-link{justify-self:start}.footer-legal{padding-bottom:32px}}
 
-/* Elis creator profile links */
+/* Esil creator profile links */
 .team-profile-link,.footer-author-link{color:inherit;text-decoration:none;text-underline-offset:3px;transition:color .18s ease}
 .team-profile-link:hover,.footer-author-link:hover{color:var(--accent);text-decoration:underline}
 .team-profile-link:focus-visible,.footer-author-link:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:2px}
 
 
-/* ELIS / OPTIONAL WEATHER — intentionally restrained; off until enabled. */
+/* ESIL / OPTIONAL WEATHER — intentionally restrained; off until enabled. */
 .weather-canvas{position:fixed;inset:0;z-index:0;pointer-events:none;width:100%;height:100%;opacity:.85}
 .weather-canvas[hidden],.weather-panel[hidden]{display:none!important}
 body>main,body>.quote-strip,body>footer{position:relative;z-index:1}
@@ -80,16 +80,16 @@ body>main,body>.quote-strip,body>footer{position:relative;z-index:1}
 
 @media(max-width:900px){.header .nav{gap:14px}.nav a{font-size:12px}}
 
-/* Elis hero: subtle one-time drop and return. No looping or blur. */
+/* Esil hero: subtle one-time drop and return. No looping or blur. */
 .hero-title-line {
   display: block;
   max-width: 100%;
-  animation: elis-title-settle 920ms cubic-bezier(.43, 0, .24, 1);
+  animation: esil-title-settle 920ms cubic-bezier(.43, 0, .24, 1);
 }
 .hero-title-line:nth-child(2) {
   animation-delay: 140ms;
 }
-@keyframes elis-title-settle {
+@keyframes esil-title-settle {
   0%, 100% { transform: none; }
   42% { transform: translateY(9px); }
 }

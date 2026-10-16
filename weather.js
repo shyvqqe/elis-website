@@ -1,4 +1,4 @@
-/* Elis decorative weather: optional, low-contrast, and never blocks interaction. */
+/* Esil decorative weather: optional, low-contrast, and never blocks interaction. */
 (() => {
   'use strict';
   const canvas = document.getElementById('weather-canvas');
@@ -9,7 +9,7 @@
 
   const ctx = canvas.getContext('2d', { alpha: true });
   if (!ctx) return;
-  const STORAGE_KEY = 'elis-weather-v1';
+  const STORAGE_KEY = 'esil-weather-v1';
   const options = [...panel.querySelectorAll('[data-weather]')];
   const motionQuery = window.matchMedia ? window.matchMedia('(prefers-reduced-motion: reduce)') : null;
   const motionReduced = () => !!(motionQuery && motionQuery.matches);
