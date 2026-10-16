@@ -41,6 +41,10 @@
 .footer-legal{display:flex;justify-content:flex-end;padding:22px 0 38px;border-top:1px solid var(--line);font-size:12px;color:#94A3B8;line-height:1.5}.footer-legal-content{display:grid;gap:7px;width:max-content;max-width:100%;padding:0 18px 0 0;text-align:left}
 .footer-legal-name{color:var(--ink);font-size:15px;font-weight:600;letter-spacing:-.025em;margin-bottom:3px}
 .footer-legal .grok-disclaimer{color:#83909c;font-size:11px;margin-top:2px}
+.footer-legal-links{display:flex;flex-wrap:wrap;gap:18px;color:var(--muted);font-size:12px;margin-bottom:10px}
+.footer-legal-links a,.footer-legal-links span{color:inherit}
+.footer-legal-links a:hover{color:var(--accent)}
+
 @media(max-width:1050px){.header .nav{gap:16px}.team-entry{grid-template-columns:minmax(0,1fr) minmax(0,1.25fr) auto;gap:16px}}
 @media(max-width:750px){.team-section{padding-top:72px;padding-bottom:70px}.team-entry{grid-template-columns:1fr;gap:16px;padding:22px 0}.team-link{justify-self:start}.footer-legal{padding-bottom:32px}}
 
@@ -97,4 +101,4 @@ body>main,body>.quote-strip,body>footer{position:relative;z-index:1}
   .hero-title-line { animation: none; }
 }
 
-@media(max-width:750px){.footer-legal-content{width:min(100%,460px);padding-right:8px}}
+@media(max-width:750px){.footer-legal-content{width:min(100%,460px);padding-right:8px}.footer-legal-links{gap:14px}}
