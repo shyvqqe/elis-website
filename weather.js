@@ -112,13 +112,17 @@
     draw(0);
     if (!motionReduced() && !document.hidden) frameId = window.requestAnimationFrame(tick);
   }
+  function updateDescription() {
+    const description = { off: 'Эффекты фона: выключены', snow: 'Эффекты фона: снег', rain: 'Эффекты фона: дождь' };
+    const tr = key => window.EsilI18n?.t(key) ?? key;
+    trigger.setAttribute('aria-label', `${tr(description[mode])}. ${tr('Открыть настройки')}`);
+    trigger.title = tr(description[mode]);
+  }
   function selectMode(next, persist = true) {
     if (!['off', 'snow', 'rain'].includes(next)) next = 'off';
     mode = next;
     options.forEach(option => option.setAttribute('aria-pressed', String(option.dataset.weather === mode)));
-    const description = { off: 'Эффекты фона: выключены', snow: 'Эффекты фона: снег', rain: 'Эффекты фона: дождь' };
-    trigger.setAttribute('aria-label', `${description[mode]}. Открыть настройки`);
-    trigger.title = description[mode];
+    updateDescription();
     trigger.classList.toggle('is-active', mode !== 'off');
     if (persist) remember(mode);
     start();
@@ -153,6 +157,7 @@
     if (motionQuery.addEventListener) motionQuery.addEventListener('change', handleMotionChange);
     else if (motionQuery.addListener) motionQuery.addListener(handleMotionChange);
   }
+  window.addEventListener('esil:languagechange',updateDescription);
   selectMode(readPreference(), false);
   document.documentElement.classList.add('weather-ready');
 })();
