@@ -1,0 +1,20 @@
+/* Vivian 3.1 fixes */
+html{scroll-behavior:smooth;scroll-padding-top:88px}
+[hidden],.command-item[hidden],.command-pages[hidden],.empty-search[hidden]{display:none!important}
+.command-browser .command-search{position:sticky;top:76px;z-index:5;background:#19191d;border:1px solid rgba(184,164,217,.28);border-radius:14px;box-shadow:0 8px 24px rgba(0,0,0,.18)}
+.command-search input{min-width:0;font-size:15px}
+.command-pages{gap:14px;align-items:center;justify-content:center;flex-wrap:wrap}
+.command-pages button{border-radius:13px}
+.nav-invite-cta{background:#b8a4d9!important;color:#17131e!important;border-color:#b8a4d9!important;font-weight:750!important;box-shadow:0 6px 18px rgba(184,164,217,.15)}
+.nav-invite-cta:hover{transform:translateY(-2px);box-shadow:0 9px 24px rgba(184,164,217,.25)}
+.music-showcase{display:flex;align-items:center;gap:16px;background:#24222c;border:1px solid #3e374d;border-radius:18px;padding:17px;margin-top:22px}
+.music-showcase-icon{display:grid;place-items:center;width:65px;height:65px;flex:0 0 65px;font-size:34px;color:#d3bff0;border-radius:16px;background:#312a3c}
+.music-showcase>div:last-child{display:flex;flex-direction:column;gap:6px;min-width:0}
+.music-showcase-label{font:10px ui-monospace,monospace;color:#bea5e2;letter-spacing:.1em}
+.music-showcase strong{font-size:16px;color:#f0eaf8}
+.music-showcase small{font-size:11px;color:#bbb4c8}
+.music-showcase-actions{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-top:20px}
+.music-availability-note{font-size:11px!important;min-height:0!important;margin-top:18px!important;color:#a7a0ad!important}
+.section-intro{max-width:750px}.section-intro>p{line-height:1.7}
+@media(max-width:680px){.command-browser .command-search{top:8px}.music-showcase-actions{align-items:stretch;flex-direction:column}.music-showcase-actions a{justify-content:center}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}

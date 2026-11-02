@@ -1,0 +1,43 @@
+/* Vivian Web 2.3 — visual-only overrides. Original avatar and functionality preserved. */
+:root{--bg:#111214;--panel:#1e1f22;--surface:#1b1c20;--ink:#f2f3f5;--muted:#b5bac1;--accent:#b8a4d9;--accent-hover:#d0bee9;--line:#303136;--thin:rgba(255,255,255,.07);--accent-rgb:184,164,217;--bg-rgb:17,18,20;color-scheme:dark}
+html{scroll-padding-top:84px}body{background:var(--bg)!important;color:var(--ink)}
+.header{background:rgba(13,14,16,.94)!important;border-bottom:1px solid var(--thin)!important;box-shadow:0 4px 30px rgba(0,0,0,.12)}
+.header-inner{gap:21px}.header .nav{gap:clamp(10px,1.25vw,22px)}.nav a,.subtle-link{color:#c5c5ce}.nav a:hover,.subtle-link:hover{color:#fff}.header-right{gap:12px}
+.header .brand .mark,.footer .brand .mark{border:0!important;background:transparent!important;transform:none!important;border-radius:50%!important;overflow:hidden!important}
+.header .brand .mark img,.footer .brand .mark img{width:100%;height:100%;object-fit:cover;border-radius:50%!important;transform:none!important}
+.primary-btn,.small-cta,.plain-btn,.web2-header-link,.weather-trigger,.wm-controls button,.extra-action,.dash-links a,.btn,.category-tabs button,.preview-presets>button,.preset-buttons button,.quick-commands button,.dialog-close,.image-expand{border-radius:14px!important;transition:background-color .2s ease,color .2s ease,border-color .2s ease,transform .2s ease,box-shadow .2s ease}
+.primary-btn,.btn,.web2-float a{background:var(--accent)!important;color:#16121e!important;box-shadow:none!important}.primary-btn:hover,.btn:hover,.web2-float a:hover{background:var(--accent-hover)!important;transform:translateY(-2px)}
+.small-cta,.web2-header-link,.weather-trigger{background:#202126!important;border:1px solid rgba(255,255,255,.11)!important;color:#eeeaf4!important}.small-cta:hover,.web2-header-link:hover,.weather-trigger:hover{background:#2b2b32!important;border-color:rgba(184,164,217,.45)!important}
+.language-switch{background:#222328!important;border-color:#36373d!important;border-radius:999px!important}.language-switch button{border-radius:999px!important}.language-thumb{border-radius:999px!important}
+.weather-panel,.mobile-nav>div,.command-browser,.console,.extra-card,.chat-shell,.compare-widget,.preview-compare,.dash-card,.team-badge,.scenario-box,.image-dialog,.feature-table,.terminal-form,.preview-presets,.command-search,.rank-preview,.music-preview,.wm-input{border-color:var(--thin)!important}
+.chat-shell,.command-browser,.console,.extra-card,.compare-widget,.preview-compare,.dash-card,.image-dialog{border-radius:20px!important;box-shadow:0 12px 34px rgba(0,0,0,.12)!important;overflow:hidden}
+.extra-card,.command-browser,.console,.dash-card,.chat-shell{background:#1c1d21!important}
+.chat-top,.console-head,.chat-footer,.terminal-form,.scenario-box,.command-item summary:hover,.quick-commands button,.weather-panel,.mobile-nav>div{background:#24252a!important}
+.work-section,.compare-section{background:#151619!important}.footer{background:#121316!important}.preview-compare,.compare-widget{background:#1a1b20!important}
+.command-item,.command-search,.category-tabs,.chat-top,.console-head{border-color:var(--thin)!important}.category-tabs button.active{background:rgba(184,164,217,.17)!important;color:#e6d8ff!important}.category-tabs button:hover{background:#292a30!important}
+.command-search input,.wm-input,.terminal-form input{color:var(--ink)!important}.wm-input{background:#131417!important;border-radius:12px!important}.wm-controls button{background:#b8a4d9!important;color:#16121e!important;min-height:44px}.wm-controls button:hover{background:#d0bee9!important;transform:translateY(-1px)}
+.team-avatar,.team-initial,.album-art,.rank-preview,.mobile-nav>div,.weather-panel{border-radius:16px!important}
+.feat-arrow{display:none!important}.feature-row{grid-template-columns:90px minmax(220px,1fr) 1fr!important}.feature-row:hover{background:rgba(255,255,255,.025)!important;border-radius:12px}
+.web2-float a{border-radius:16px!important}.nav a:focus-visible,a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid #c5b3ea!important;outline-offset:3px}
+/* Optional desktop-only square pointer; it never suppresses keyboard focus or text editing cursors */
+@media (pointer:fine) and (hover:hover){body.vivian-cursor-active,body.vivian-cursor-active a,body.vivian-cursor-active button,body.vivian-cursor-active summary{cursor:none!important}body.vivian-cursor-active input,body.vivian-cursor-active textarea,body.vivian-cursor-active [contenteditable]{cursor:text!important}}
+.vivian-pointer{position:fixed;left:0;top:0;width:16px;height:16px;pointer-events:none;z-index:2147483646;border:1.5px solid #b8a4d9;border-radius:3px;transform:translate3d(-100px,-100px,0) translate(-50%,-50%);will-change:transform,width,height,border-radius;transition:width .2s,border-radius .2s,height .2s,background .2s,opacity .2s;opacity:0;background:rgba(184,164,217,.06)}.vivian-pointer.is-visible{opacity:1}.vivian-pointer.is-hover{width:40px;height:40px;border-radius:10px;background:rgba(184,164,217,.15)}.vivian-pointer.is-press{width:11px;height:11px}
+@media(max-width:750px){.feature-row{grid-template-columns:38px 1fr!important}.header-right{gap:9px}.header .small-cta{display:none}.web2-header-link{display:none!important}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.001ms!important;transition-duration:.001ms!important}.vivian-pointer{display:none!important}}
+
+/* Vivian 2.4 — responsive cursor, richer weather, motion polish */
+.vivian-pointer { border-width: 2px; box-shadow:0 0 10px rgba(184,164,217,.15); transition:width .14s ease,height .14s ease,border-radius .14s ease,background .14s ease,opacity .12s ease; }
+.vivian-pointer.is-hover { box-shadow:0 0 18px rgba(184,164,217,.23); }
+@media (prefers-reduced-motion:no-preference) {
+  .vivian-reveal-on { animation:vivian-reveal .62s cubic-bezier(.21,.85,.26,1) both; animation-delay:var(--vivian-motion-delay,0ms); }
+  @keyframes vivian-reveal { from {opacity:.30;transform:translate3d(0,20px,0)} to {opacity:1;transform:translate3d(0,0,0)} }
+  .extra-card,.dash-card,.music-preview,.command-browser,.feature-row,.team-badge,.scenario-box,.preview-compare { transition:transform .28s cubic-bezier(.2,.8,.2,1),box-shadow .28s ease,border-color .2s ease,background-color .2s ease; }
+  .extra-card:hover,.dash-card:hover,.music-preview:hover,.team-badge:hover { transform:translateY(-4px);box-shadow:0 16px 44px rgba(0,0,0,.27)!important;border-color:rgba(184,164,217,.25)!important; }
+  .feature-row:hover { transform:translateX(4px); }
+  .header .nav a,.nav a { transition:color .18s ease,opacity .18s ease; }
+  .primary-btn:active,.small-cta:active,.btn:active,.wm-controls button:active { transform:scale(.97)!important; }
+  .primary-btn:hover,.small-cta:hover,.btn:hover { box-shadow:0 9px 22px rgba(184,164,217,.15)!important; }
+}
+@media (prefers-reduced-motion:reduce) {
+  .vivian-reveal-on { animation:none!important; }
+}

@@ -1,0 +1,20 @@
+/* Vivian 2.7 · restrained premium motion */
+:root { --motion-ease: cubic-bezier(.2,.85,.24,1); }
+/* Liquid navigation underline */
+.header .nav a { position:relative; transition:color .2s ease,opacity .2s ease!important; }
+.header .nav a::after { content:""; position:absolute;left:0;right:0;bottom:-8px;height:2px;background:var(--accent,#b8a4d9);border-radius:5px;transform:scaleX(0);transform-origin:left;opacity:.8;transition:transform .28s var(--motion-ease);pointer-events:none; }
+.header .nav a:hover::after,.header .nav a:focus-visible::after { transform:scaleX(1); }
+/* Quiet button reflection, no cursor interception */
+.primary-btn,.small-cta,.btn { position:relative;overflow:hidden;isolation:isolate; }
+.primary-btn::after,.small-cta::after,.btn::after {content:"";position:absolute;inset:0;pointer-events:none;opacity:0;background:linear-gradient(115deg,transparent 20%,rgba(255,255,255,.17) 48%,transparent 70%);transform:translateX(-110%);transition:transform .65s ease,opacity .25s ease;}
+.primary-btn:hover::after,.small-cta:hover::after,.btn:hover::after {opacity:1;transform:translateX(110%);}
+/* Progressive reveal only after JS adds class; no content hidden if script fails */
+.motion-ready .motion-reveal{opacity:0;transform:translate3d(0,24px,0);filter:blur(3px);transition:opacity .72s var(--motion-ease),transform .72s var(--motion-ease),filter .72s ease;transition-delay:var(--reveal-delay,0ms);}
+.motion-ready .motion-reveal.motion-visible{opacity:1;transform:none;filter:none;}
+.motion-card {transition:transform .3s var(--motion-ease),border-color .3s ease,box-shadow .3s ease!important;will-change:auto;}
+@media(hover:hover) and (pointer:fine){.motion-card:hover {transform:translateY(-5px);border-color:rgba(184,164,217,.35)!important;box-shadow:0 16px 34px rgba(0,0,0,.16);}}
+/* hero content intentionally gentle */
+.motion-hero{animation:motion-hero-in .85s var(--motion-ease) both;}
+@keyframes motion-hero-in{from{opacity:.35;transform:translateY(14px)}to{opacity:1;transform:none}}
+/* visible focus and no layout shift */
+@media(prefers-reduced-motion: reduce){.motion-ready .motion-reveal{opacity:1!important;transform:none!important;filter:none!important;transition:none!important}.motion-hero{animation:none!important}.motion-card,.header .nav a::after,.primary-btn::after,.small-cta::after,.btn::after{transition:none!important;transform:none!important}}
