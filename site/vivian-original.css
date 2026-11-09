@@ -1,0 +1,68 @@
+/* Vivian 3.3 — own identity; retains existing UI and functional JS. */
+:root { --violet:#b8a4d9; --violet-bright:#d8c3ff; --night:#101116; --raised:#1a1b23; }
+body { background:#101116!important; }
+.header { backdrop-filter:blur(18px); -webkit-backdrop-filter:blur(18px); }
+.header .brand { font-weight:800; letter-spacing:-.065em; }
+.header .brand .mark img, .footer .brand .mark img { border-radius:14px!important; }
+.vivian-hero { display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(35px,4vw,80px);min-height:660px;align-items:center;padding-top:100px;padding-bottom:84px;position:relative; }
+.vivian-hero:before {content:'';position:absolute;width:440px;height:440px;pointer-events:none;z-index:-1;top:70px;left:0;background:radial-gradient(circle,rgba(155,123,222,.12),transparent 70%);}
+.vivian-hero .hero-main { min-width:0; }
+.vivian-hero .eyebrow {display:flex;gap:11px;align-items:center;font:700 11px ui-monospace,monospace;letter-spacing:.11em;color:#c7b5ea;}
+.live-dot {display:inline-block;height:8px;width:8px;border-radius:50%;background:#bb9efa;box-shadow:0 0 0 5px rgba(184,164,217,.12);}
+.vivian-hero h1 {font-size:clamp(55px,5.6vw,91px);line-height:1.05;letter-spacing:-.074em;max-width:650px;margin:25px 0 26px;}
+.vivian-hero h1 .hero-title-line {display:block;}
+.vivian-hero h1 em {font-style:normal;color:#bea6e0;}
+.vivian-hero .hero-main>p {font-size:16px;max-width:485px;color:#b8b5c5;line-height:1.75;}
+.vivian-hero .hero-actions {gap:17px;margin-top:30px;}
+.vivian-hero .hero-invite {font-size:13px;letter-spacing:0;box-shadow:0 10px 35px rgba(161,127,210,.14)!important;}
+.vivian-hero .hero-dashboard-link {font-size:13px;color:#e7ddfa;border-bottom:1px solid #74698a;padding:9px 0;}
+.vivian-hero .hero-preview-link {font-size:12px;color:#9e9aaa;padding:9px 0;}
+.hero-command-dock {margin-top:36px;border:1px solid rgba(184,164,217,.2);border-radius:18px;padding:15px 16px;max-width:485px;background:rgba(32,29,43,.68);box-shadow:0 15px 35px rgba(0,0,0,.12);}
+.dock-label {display:flex;align-items:center;gap:11px;}
+.dock-label img {width:34px;height:34px;object-fit:cover;border-radius:12px;}
+.dock-label span {display:flex;flex-direction:column;gap:4px;}
+.dock-label strong {font:700 10px ui-monospace,monospace;letter-spacing:.11em;color:#e6dbfa;}
+.dock-label small {font-size:11px;color:#9f9aa9;}
+.dock-actions {display:flex;gap:8px;flex-wrap:wrap;margin-top:15px;}
+.dock-actions a {border:1px solid #494255;border-radius:999px;padding:8px 12px;text-decoration:none;font:600 11px system-ui;color:#e3d9f1;background:#292431;transition:transform .18s,border-color .18s,background .18s;}
+.dock-actions a:hover,.dock-actions a:focus-visible {transform:translateY(-2px);background:#352c46;border-color:#bd9ce8;}
+.vivian-app-demo {padding:0;min-width:0;position:relative;}
+.vivian-window {background:#171720;border:1px solid #4b405c;border-radius:22px;box-shadow:0 35px 95px rgba(0,0,0,.42),0 0 75px rgba(129,95,187,.07);overflow:hidden;position:relative;transform:rotate(0.25deg);}
+.vivian-window-title {display:flex;align-items:center;gap:14px;background:#252331;border-bottom:1px solid #40374b;padding:15px 18px;font:650 10px ui-monospace,monospace;color:#d6cbe8;letter-spacing:.06em;}
+.window-signal {display:inline-flex;gap:4px;}.window-signal i {display:block;width:7px;height:7px;border-radius:50%;background:#a48dbe}.window-signal i:nth-child(2){background:#6f6387}.window-signal i:nth-child(3){background:#4c4764}
+.window-preview-label {color:#9790a2;margin-left:auto;font-size:9px;}
+.vivian-window-body {display:grid;grid-template-columns:62px minmax(0,1fr);align-items:stretch;}
+.vivian-app-rail {display:flex;flex-direction:column;align-items:center;gap:14px;padding:19px 7px;background:#1d1b26;border-right:1px solid #3b3545;}
+.rail-bot {width:39px;height:39px;border-radius:15px;object-fit:cover;}
+.rail-line {width:24px;height:1px;background:#50455e;margin:3px 0;}
+.vivian-app-rail a {height:38px;width:38px;display:grid;place-items:center;text-decoration:none;background:#2c2938;border:1px solid #423d4c;color:#cdb9e6;border-radius:12px;font-size:21px;transition:background .2s,transform .2s;}
+.vivian-app-rail a:hover {background:#3d324b;transform:translateY(-2px);}
+.vivian-window .chat-shell {min-height:370px!important;border:0!important;border-radius:0!important;box-shadow:none!important;background:#1f2029!important;}
+.vivian-window .chat-top {background:#282933!important;}
+.vivian-window .chat-rows {padding:23px 18px;gap:26px;}
+.vivian-window .chat-line p {font-size:12px;color:#d9d8e0;}
+.vivian-window .chat-footer {margin-bottom:10px;}
+.vivian-window .mock-watermark {color:#858096;padding-bottom:12px;}
+.vivian-window-status {min-height:44px;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 18px;border-top:1px solid #41384e;background:#24212d;font-size:10px;color:#ada4bb;}
+.vivian-window-status>span {display:inline-flex;align-items:center;gap:8px;}
+.status-light {display:inline-block;width:7px;height:7px;border-radius:50%;background:#89d8bf;box-shadow:0 0 8px rgba(137,216,191,.3);}
+.vivian-window-status a {color:#d9bef6;text-decoration:none;white-space:nowrap;}
+.vivian-features {padding-top:70px;}
+.vivian-features .section-intro {max-width:670px;}
+.vivian-features .section-intro h2 {letter-spacing:-.055em;}
+.vivian-features .feature-table {display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;border:0!important;background:transparent;}
+.vivian-features .vivian-feature-tile {position:relative;min-height:230px;display:flex;flex-direction:column;align-items:flex-start;gap:12px;padding:23px 20px;background:#1c1c26;border:1px solid #35313f;border-radius:20px;transition:transform .2s,border-color .2s,background .2s;}
+.vivian-features .vivian-feature-tile:hover {transform:translateY(-4px);border-color:#746187;background:#24202e;}
+.feature-symbol {font:36px ui-monospace,monospace;color:#ba9bdf;line-height:1.2;}
+.vivian-features .feat-no {font:700 10px ui-monospace,monospace;color:#bcaacc;letter-spacing:.12em;}
+.vivian-features .feature-row h3 {font-size:19px;line-height:1.15;margin:0;color:#f3edf8;letter-spacing:-.035em;}
+.vivian-features .feature-row p {font-size:12px;color:#a9a6b4;line-height:1.55;margin:0;}
+.vivian-features .feat-arrow {position:absolute;right:18px;top:20px;color:#9b8daa;font-size:16px;}
+#preview .section-intro h2,#commands .section-intro h2 {letter-spacing:-.05em;}
+#preview {border-block:1px solid rgba(184,164,217,.08)}
+#commands .command-browser {border:1px solid #393444!important;}
+#commands .command-search {border:1px solid #665378;}
+@media(max-width:1200px){.vivian-features .feature-table{grid-template-columns:repeat(2,minmax(0,1fr))}.vivian-hero{gap:30px;}.vivian-window-body{grid-template-columns:52px minmax(0,1fr)}.vivian-app-rail{gap:10px}}
+@media(max-width:880px){.vivian-hero{grid-template-columns:1fr;padding-top:65px;padding-bottom:70px;min-height:0}.vivian-hero h1{font-size:clamp(50px,9vw,78px)}.vivian-app-demo{max-width:680px}.vivian-features .feature-table{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:580px){.vivian-hero h1{font-size:clamp(46px,12vw,67px)}.vivian-hero .hero-actions{flex-wrap:wrap;gap:15px}.vivian-hero .hero-invite{width:100%;justify-content:center}.vivian-hero .hero-preview-link{display:none}.vivian-window-body{grid-template-columns:45px minmax(0,1fr)}.vivian-app-rail{padding:13px 4px}.vivian-app-rail a{width:33px;height:33px}.rail-bot{width:33px;height:33px}.vivian-window .chat-rows{padding:15px 10px;gap:21px}.vivian-window .chat-line{gap:7px}.vivian-window .round-avatar{width:30px;height:30px}.window-preview-label{display:none}.vivian-window-status{flex-wrap:wrap}.vivian-features .feature-table{grid-template-columns:1fr 1fr;gap:10px}.vivian-features .vivian-feature-tile{min-height:208px;padding:17px 13px}.vivian-features .feature-row h3{font-size:16px}.vivian-features .feature-row p{font-size:11px}.feature-symbol{font-size:27px}}
+@media(prefers-reduced-motion:reduce){.vivian-features .vivian-feature-tile,.vivian-app-rail a,.dock-actions a{transition:none!important}}

@@ -1,6 +1,28 @@
 (() => {
   'use strict';
   const english = {
+  "ТВОЙ СЕРВЕР. ТВОИ ЛЮДИ. VIVIAN.": "YOUR SERVER. YOUR PEOPLE. VIVIAN.",
+  "У сервера": "Your server",
+  "есть характер.": "has character.",
+  "Vivian помогает поддерживать порядок, собирать людей в голосовых каналах и делать общение живее — прямо внутри Discord.": "Vivian helps keep things organized, bring people together in voice channels, and make conversations feel alive — all inside Discord.",
+  "Добавить Vivian в Discord": "Add Vivian to Discord",
+  "Открыть Control Center": "Open Control Center",
+  "Посмотреть, как работает": "See it in action",
+  "Выбери, что интересно": "Pick what interests you",
+  "# модерация": "# moderation",
+  "# AI-чат": "# AI chat",
+  "# музыка": "# music",
+  "# XP": "# XP",
+  "Демо Discord-интерфейса": "Discord interface demo",
+  "Открыть команды": "Browse commands",
+  "ЭКОСИСТЕМА VIVIAN": "VIVIAN ECOSYSTEM",
+  "Четыре стороны одного сервера.": "Four sides of one server.",
+  "Не набор разрозненных кнопок — инструменты, которые помогают сообществу жить своей жизнью.": "Not a collection of random buttons — tools that help a community thrive.",
+  "Не просто слова. Посмотри интерфейс.": "More than words. See the interface.",
+  "Найди свою команду.": "Find your command.",
+  "VIVIAN / КАК ЭТО ВЫГЛЯДИТ": "VIVIAN / SEE IT IN ACTION",
+  "КОМАНДЫ VIVIAN": "VIVIAN COMMANDS",
+
   "Модерация, музыка, ИИ и 69 команд: капсулы времени, голосования, истории, приватные комнаты и многое другое.": "Moderation, music, AI and 69 commands: time capsules, ballots, stories, private rooms and more.",
 
   "О Vivian, её возможностях и текущем состоянии.": "About Vivian, its features and current status.",
